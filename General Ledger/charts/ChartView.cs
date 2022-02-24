@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace General_Ledger.charts
+namespace General_Ledger
 {
     public partial class ChartView : Form
     {

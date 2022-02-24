@@ -1,4 +1,4 @@
-﻿namespace General_Ledger.charts
+﻿namespace General_Ledger
 {
     partial class ChartView
     {
