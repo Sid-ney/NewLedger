@@ -47,5 +47,10 @@ namespace General_Ledger
         {
 
         }
+
+        private void ChartOfAccountsButton_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

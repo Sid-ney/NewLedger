@@ -33,6 +33,7 @@
             this.Email = new System.Windows.Forms.Button();
             this.CreateNewUser = new System.Windows.Forms.Button();
             this.SignOutButton = new System.Windows.Forms.Button();
+            this.ChartOfAccountsButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -90,11 +91,22 @@
             this.SignOutButton.UseVisualStyleBackColor = true;
             this.SignOutButton.Click += new System.EventHandler(this.SignOutButton_Click);
             // 
+            // ChartOfAccountsButton
+            // 
+            this.ChartOfAccountsButton.Location = new System.Drawing.Point(305, 286);
+            this.ChartOfAccountsButton.Name = "ChartOfAccountsButton";
+            this.ChartOfAccountsButton.Size = new System.Drawing.Size(145, 76);
+            this.ChartOfAccountsButton.TabIndex = 5;
+            this.ChartOfAccountsButton.Text = "ChartOfAccounts\r\n";
+            this.ChartOfAccountsButton.UseVisualStyleBackColor = true;
+            this.ChartOfAccountsButton.Click += new System.EventHandler(this.ChartOfAccountsButton_Click);
+            // 
             // MainAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.ChartOfAccountsButton);
             this.Controls.Add(this.SignOutButton);
             this.Controls.Add(this.CreateNewUser);
             this.Controls.Add(this.Email);
@@ -114,5 +126,6 @@
         private System.Windows.Forms.Button Email;
         private System.Windows.Forms.Button CreateNewUser;
         private System.Windows.Forms.Button SignOutButton;
+        private System.Windows.Forms.Button ChartOfAccountsButton;
     }
 }
