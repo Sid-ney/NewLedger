@@ -15,6 +15,7 @@ namespace General_Ledger
     {
         public SqlConnection conn = new SqlConnection();
         public SqlCommand cmd = new SqlCommand();
+        public static string userID;
         public Login()
         {
             InitializeComponent();
@@ -67,9 +68,11 @@ namespace General_Ledger
                     Console.WriteLine(dr["Username"].ToString());
                     if (textBoxUsername.Text.Equals(dr["Username"].ToString()) && textBoxPassword.Text.Equals(dr["CurrentPassword"].ToString()))
                     {
+                    
                         //MessageBox.Show("success!");
                         if (dr["AccountType"].ToString().Equals("Administrator"))
                         {
+                            userID = textBoxUsername.Text;
                             this.Hide();
                             MainAdmin mainAdmin = new MainAdmin();
                             mainAdmin.Show();

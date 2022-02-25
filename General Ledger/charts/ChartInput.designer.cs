@@ -54,6 +54,10 @@
             this.textBoxStatement = new System.Windows.Forms.TextBox();
             this.textBoxComment = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.debitTextBox = new System.Windows.Forms.TextBox();
+            this.creditTextBox = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -150,7 +154,7 @@
             // 
             this.labelAccountInitialBalance.AutoSize = true;
             this.labelAccountInitialBalance.Font = new System.Drawing.Font("Franklin Gothic Book", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAccountInitialBalance.Location = new System.Drawing.Point(6, 248);
+            this.labelAccountInitialBalance.Location = new System.Drawing.Point(6, 304);
             this.labelAccountInitialBalance.Name = "labelAccountInitialBalance";
             this.labelAccountInitialBalance.Size = new System.Drawing.Size(98, 20);
             this.labelAccountInitialBalance.TabIndex = 9;
@@ -160,7 +164,7 @@
             // 
             this.labelBalance.AutoSize = true;
             this.labelBalance.Font = new System.Drawing.Font("Franklin Gothic Book", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelBalance.Location = new System.Drawing.Point(44, 280);
+            this.labelBalance.Location = new System.Drawing.Point(41, 337);
             this.labelBalance.Name = "labelBalance";
             this.labelBalance.Size = new System.Drawing.Size(60, 20);
             this.labelBalance.TabIndex = 10;
@@ -170,7 +174,7 @@
             // 
             this.labelAccountOrder.AutoSize = true;
             this.labelAccountOrder.Font = new System.Drawing.Font("Franklin Gothic Book", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAccountOrder.Location = new System.Drawing.Point(60, 312);
+            this.labelAccountOrder.Location = new System.Drawing.Point(57, 369);
             this.labelAccountOrder.Name = "labelAccountOrder";
             this.labelAccountOrder.Size = new System.Drawing.Size(44, 20);
             this.labelAccountOrder.TabIndex = 11;
@@ -180,7 +184,7 @@
             // 
             this.labelAccountStatement.AutoSize = true;
             this.labelAccountStatement.Font = new System.Drawing.Font("Franklin Gothic Book", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAccountStatement.Location = new System.Drawing.Point(27, 344);
+            this.labelAccountStatement.Location = new System.Drawing.Point(27, 401);
             this.labelAccountStatement.Name = "labelAccountStatement";
             this.labelAccountStatement.Size = new System.Drawing.Size(77, 20);
             this.labelAccountStatement.TabIndex = 12;
@@ -191,7 +195,7 @@
             // 
             this.labelAccountComment.AutoSize = true;
             this.labelAccountComment.Font = new System.Drawing.Font("Franklin Gothic Book", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAccountComment.Location = new System.Drawing.Point(33, 376);
+            this.labelAccountComment.Location = new System.Drawing.Point(33, 433);
             this.labelAccountComment.Name = "labelAccountComment";
             this.labelAccountComment.Size = new System.Drawing.Size(71, 20);
             this.labelAccountComment.TabIndex = 13;
@@ -253,7 +257,7 @@
             // textBoxInitialBalance
             // 
             this.textBoxInitialBalance.Font = new System.Drawing.Font("Franklin Gothic Book", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxInitialBalance.Location = new System.Drawing.Point(110, 244);
+            this.textBoxInitialBalance.Location = new System.Drawing.Point(110, 304);
             this.textBoxInitialBalance.Name = "textBoxInitialBalance";
             this.textBoxInitialBalance.Size = new System.Drawing.Size(185, 26);
             this.textBoxInitialBalance.TabIndex = 20;
@@ -261,7 +265,7 @@
             // textBoxBalance
             // 
             this.textBoxBalance.Font = new System.Drawing.Font("Franklin Gothic Book", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxBalance.Location = new System.Drawing.Point(110, 276);
+            this.textBoxBalance.Location = new System.Drawing.Point(110, 337);
             this.textBoxBalance.Name = "textBoxBalance";
             this.textBoxBalance.Size = new System.Drawing.Size(185, 26);
             this.textBoxBalance.TabIndex = 21;
@@ -269,7 +273,7 @@
             // textBoxOrder
             // 
             this.textBoxOrder.Font = new System.Drawing.Font("Franklin Gothic Book", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxOrder.Location = new System.Drawing.Point(110, 308);
+            this.textBoxOrder.Location = new System.Drawing.Point(110, 369);
             this.textBoxOrder.Name = "textBoxOrder";
             this.textBoxOrder.Size = new System.Drawing.Size(185, 26);
             this.textBoxOrder.TabIndex = 22;
@@ -277,7 +281,7 @@
             // textBoxStatement
             // 
             this.textBoxStatement.Font = new System.Drawing.Font("Franklin Gothic Book", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxStatement.Location = new System.Drawing.Point(110, 340);
+            this.textBoxStatement.Location = new System.Drawing.Point(110, 401);
             this.textBoxStatement.Name = "textBoxStatement";
             this.textBoxStatement.Size = new System.Drawing.Size(185, 26);
             this.textBoxStatement.TabIndex = 23;
@@ -285,7 +289,7 @@
             // textBoxComment
             // 
             this.textBoxComment.Font = new System.Drawing.Font("Franklin Gothic Book", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxComment.Location = new System.Drawing.Point(110, 372);
+            this.textBoxComment.Location = new System.Drawing.Point(110, 433);
             this.textBoxComment.Name = "textBoxComment";
             this.textBoxComment.Size = new System.Drawing.Size(185, 26);
             this.textBoxComment.TabIndex = 24;
@@ -293,18 +297,60 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Franklin Gothic Book", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(185, 404);
+            this.button1.Location = new System.Drawing.Point(149, 480);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(69, 29);
             this.button1.TabIndex = 25;
             this.button1.Text = "Submit";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // debitTextBox
+            // 
+            this.debitTextBox.Font = new System.Drawing.Font("Franklin Gothic Book", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.debitTextBox.Location = new System.Drawing.Point(110, 240);
+            this.debitTextBox.Name = "debitTextBox";
+            this.debitTextBox.Size = new System.Drawing.Size(185, 26);
+            this.debitTextBox.TabIndex = 26;
+            // 
+            // creditTextBox
+            // 
+            this.creditTextBox.Font = new System.Drawing.Font("Franklin Gothic Book", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.creditTextBox.Location = new System.Drawing.Point(110, 272);
+            this.creditTextBox.Name = "creditTextBox";
+            this.creditTextBox.Size = new System.Drawing.Size(185, 26);
+            this.creditTextBox.TabIndex = 27;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Franklin Gothic Book", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(6, 244);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(98, 20);
+            this.label2.TabIndex = 28;
+            this.label2.Text = "Debit Balance\r\n";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Franklin Gothic Book", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(2, 276);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(102, 20);
+            this.label3.TabIndex = 29;
+            this.label3.Text = "Credit Balance";
             // 
             // ChartInput
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(434, 446);
+            this.ClientSize = new System.Drawing.Size(434, 521);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.creditTextBox);
+            this.Controls.Add(this.debitTextBox);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBoxComment);
             this.Controls.Add(this.textBoxStatement);
@@ -367,5 +413,9 @@
         private System.Windows.Forms.TextBox textBoxStatement;
         private System.Windows.Forms.TextBox textBoxComment;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox debitTextBox;
+        private System.Windows.Forms.TextBox creditTextBox;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }

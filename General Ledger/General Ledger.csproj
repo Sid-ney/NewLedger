@@ -83,7 +83,9 @@
     <Reference Include="Microsoft.IdentityModel.Tokens, Version=6.8.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.IdentityModel.Tokens.6.8.0\lib\net461\Microsoft.IdentityModel.Tokens.dll</HintPath>
     </Reference>
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
     </Reference>
@@ -213,6 +215,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>GeneralLedgerDataSet2.xsd</DependentUpon>
     </Compile>
+    <Compile Include="GeneralLedgerDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GeneralLedgerDataSet3.xsd</DependentUpon>
+    </Compile>
     <Compile Include="login\CreateNewPassword.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -336,6 +343,17 @@
     </None>
     <None Include="GeneralLedgerDataSet2.xss">
       <DependentUpon>GeneralLedgerDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="GeneralLedgerDataSet3.xsc">
+      <DependentUpon>GeneralLedgerDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="GeneralLedgerDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GeneralLedgerDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GeneralLedgerDataSet3.xss">
+      <DependentUpon>GeneralLedgerDataSet3.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
