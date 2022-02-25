@@ -31,13 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.generalLedgerDataSet = new General_Ledger.GeneralLedgerDataSet();
-            this.generalLedgerDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.generalLedgerDataSet2 = new General_Ledger.GeneralLedgerDataSet2();
-            this.generalLedgerDataSet2BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.generalLedgerDataSet3 = new General_Ledger.GeneralLedgerDataSet3();
-            this.chartOfAccountsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.chartOfAccountsTableAdapter = new General_Ledger.GeneralLedgerDataSet3TableAdapters.ChartOfAccountsTableAdapter();
             this.accountNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.accountNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.accountDescriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,20 +46,28 @@
             this.usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.orderNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statementDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.chartOfAccountsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.generalLedgerDataSet3 = new General_Ledger.GeneralLedgerDataSet3();
+            this.generalLedgerDataSet = new General_Ledger.GeneralLedgerDataSet();
+            this.generalLedgerDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.generalLedgerDataSet2 = new General_Ledger.GeneralLedgerDataSet2();
+            this.generalLedgerDataSet2BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.chartOfAccountsTableAdapter = new General_Ledger.GeneralLedgerDataSet3TableAdapters.ChartOfAccountsTableAdapter();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartOfAccountsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.generalLedgerDataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.generalLedgerDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.generalLedgerDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.generalLedgerDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.generalLedgerDataSet2BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.generalLedgerDataSet3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartOfAccountsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(728, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(107, 26);
             this.label1.TabIndex = 0;
@@ -93,44 +94,10 @@
             this.orderNumberDataGridViewTextBoxColumn,
             this.statementDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.chartOfAccountsBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(13, 39);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 82);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1114, 548);
+            this.dataGridView1.Size = new System.Drawing.Size(1542, 624);
             this.dataGridView1.TabIndex = 1;
-            // 
-            // generalLedgerDataSet
-            // 
-            this.generalLedgerDataSet.DataSetName = "GeneralLedgerDataSet";
-            this.generalLedgerDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // generalLedgerDataSetBindingSource
-            // 
-            this.generalLedgerDataSetBindingSource.DataSource = this.generalLedgerDataSet;
-            this.generalLedgerDataSetBindingSource.Position = 0;
-            // 
-            // generalLedgerDataSet2
-            // 
-            this.generalLedgerDataSet2.DataSetName = "GeneralLedgerDataSet2";
-            this.generalLedgerDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // generalLedgerDataSet2BindingSource
-            // 
-            this.generalLedgerDataSet2BindingSource.DataSource = this.generalLedgerDataSet2;
-            this.generalLedgerDataSet2BindingSource.Position = 0;
-            // 
-            // generalLedgerDataSet3
-            // 
-            this.generalLedgerDataSet3.DataSetName = "GeneralLedgerDataSet3";
-            this.generalLedgerDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // chartOfAccountsBindingSource
-            // 
-            this.chartOfAccountsBindingSource.DataMember = "ChartOfAccounts";
-            this.chartOfAccountsBindingSource.DataSource = this.generalLedgerDataSet3;
-            // 
-            // chartOfAccountsTableAdapter
-            // 
-            this.chartOfAccountsTableAdapter.ClearBeforeFill = true;
             // 
             // accountNameDataGridViewTextBoxColumn
             // 
@@ -222,23 +189,69 @@
             this.statementDataGridViewTextBoxColumn.HeaderText = "Statement";
             this.statementDataGridViewTextBoxColumn.Name = "statementDataGridViewTextBoxColumn";
             // 
+            // chartOfAccountsBindingSource
+            // 
+            this.chartOfAccountsBindingSource.DataMember = "ChartOfAccounts";
+            this.chartOfAccountsBindingSource.DataSource = this.generalLedgerDataSet3;
+            // 
+            // generalLedgerDataSet3
+            // 
+            this.generalLedgerDataSet3.DataSetName = "GeneralLedgerDataSet3";
+            this.generalLedgerDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // generalLedgerDataSet
+            // 
+            this.generalLedgerDataSet.DataSetName = "GeneralLedgerDataSet";
+            this.generalLedgerDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // generalLedgerDataSetBindingSource
+            // 
+            this.generalLedgerDataSetBindingSource.DataSource = this.generalLedgerDataSet;
+            this.generalLedgerDataSetBindingSource.Position = 0;
+            // 
+            // generalLedgerDataSet2
+            // 
+            this.generalLedgerDataSet2.DataSetName = "GeneralLedgerDataSet2";
+            this.generalLedgerDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // generalLedgerDataSet2BindingSource
+            // 
+            this.generalLedgerDataSet2BindingSource.DataSource = this.generalLedgerDataSet2;
+            this.generalLedgerDataSet2BindingSource.Position = 0;
+            // 
+            // chartOfAccountsTableAdapter
+            // 
+            this.chartOfAccountsTableAdapter.ClearBeforeFill = true;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(733, 751);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(140, 37);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Go Back";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // ChartView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1384, 761);
+            this.ClientSize = new System.Drawing.Size(1587, 842);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
             this.Name = "ChartView";
             this.Text = "ChartView";
             this.Load += new System.EventHandler(this.ChartView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartOfAccountsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.generalLedgerDataSet3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.generalLedgerDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.generalLedgerDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.generalLedgerDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.generalLedgerDataSet2BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.generalLedgerDataSet3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartOfAccountsBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -270,5 +283,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn usernameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn orderNumberDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn statementDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button button1;
     }
 }

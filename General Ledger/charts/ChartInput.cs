@@ -51,11 +51,30 @@ namespace General_Ledger
                 string Credit = creditTextBox.Text;
                 string dateString = DateTime.Now.ToString("yyyy-MM-dd");
                 string datetime = DateTime.Now.ToString("hh:mm:ss tt");
+                Decimal BeforeBalance = System.Convert.ToDecimal(Balance);
+                Decimal DebitDec = System.Convert.ToDecimal(Debit);
+                Decimal CreditDec = System.Convert.ToDecimal(Credit);
+                Decimal AfterBalance = AfterBalanceCheck(NormalSide, BeforeBalance, DebitDec, CreditDec);
+                Decimal Value = AfterBalance;
+                string Username = Login.userID;
+
+
+              
+              
+
+
+
+                //String to Decimal: System.Convert.ToDecimal(InitialBalance)
 
                 cmd = new SqlCommand("Insert into ChartOfAccounts Values('" + AccountName + "','" + AccountNumber + "','"
                     + Description + "','" + NormalSide + "','" + Catergory + "','" + Subcategory + "','" + InitialBalance + "','" + Debit
-                    + "','" + Credit + "','" + Balance + "','" + dateString + "','" + datetime + "','" + Login.userID + "','" + Order + "','" + Statement + "')", conn);
+                    + "','" + Credit + "','" + Balance + "','" + dateString + "','" + datetime + "','" + Login.userID + "','" + Order + "','" + Statement + "')", conn); ;
                 cmd.ExecuteNonQuery();
+
+                cmd = new SqlCommand("Insert into EventLog Values('" + AccountNumber + "' , '" + AccountName + "','" + NormalSide + "','" + BeforeBalance + "','" + AfterBalance + "','" + Value + "','" +
+                    dateString + "','" + datetime + "','" + Description + "','" + Username + "')", conn);
+                cmd.ExecuteNonQuery();
+
                 conn.Close();
 
                 MessageBox.Show("Data Entered");
@@ -74,5 +93,32 @@ namespace General_Ledger
         {
 
         }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private Decimal AfterBalanceCheck(string NormalSide, Decimal BeforeBalance, Decimal DebitDec, Decimal CreditDec) 
+        {
+            Decimal AfterBalance = 0.00m;
+            if (NormalSide.Equals("Debit"))
+            {
+                AfterBalance = BeforeBalance + DebitDec - CreditDec;
+            }
+            else if (NormalSide.Equals("Credit"))
+            {
+                 AfterBalance = BeforeBalance - DebitDec + CreditDec;
+            }
+            else
+            {
+                //throw new Exception("Sydney Smells");
+            }
+            return AfterBalance;
+
+        }
+
+        
     }
 }

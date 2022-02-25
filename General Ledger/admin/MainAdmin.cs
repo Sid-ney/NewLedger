@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using General_Ledger.logs;
 
 namespace General_Ledger
 {
@@ -53,6 +54,20 @@ namespace General_Ledger
             this.Close();
             ChartInput chart = new ChartInput();
             chart.Show();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+            ChartView chartView = new ChartView();
+            chartView.Show();
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+            EventLog eventLog = new EventLog();
+            eventLog.Show();
         }
     }
 }
