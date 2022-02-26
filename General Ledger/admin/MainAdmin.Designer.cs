@@ -95,9 +95,10 @@
             // 
             // ChartOfAccountsButton
             // 
+            this.ChartOfAccountsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ChartOfAccountsButton.Location = new System.Drawing.Point(96, 267);
             this.ChartOfAccountsButton.Name = "ChartOfAccountsButton";
-            this.ChartOfAccountsButton.Size = new System.Drawing.Size(145, 76);
+            this.ChartOfAccountsButton.Size = new System.Drawing.Size(145, 109);
             this.ChartOfAccountsButton.TabIndex = 5;
             this.ChartOfAccountsButton.Text = "Chart Of Accounts\r\n Input";
             this.ChartOfAccountsButton.UseVisualStyleBackColor = true;
@@ -105,9 +106,10 @@
             // 
             // button1
             // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(263, 267);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(145, 76);
+            this.button1.Size = new System.Drawing.Size(145, 109);
             this.button1.TabIndex = 6;
             this.button1.Text = "Chart Of Accounts\r\n View";
             this.button1.UseVisualStyleBackColor = true;
@@ -115,7 +117,8 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(426, 267);
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(432, 283);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(145, 76);
             this.button2.TabIndex = 7;
